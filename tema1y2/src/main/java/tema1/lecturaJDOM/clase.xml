@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clase>
+    <estudiante rollno="1">
+        <nombre>Juan</nombre>
+        <apellido>Pérez</apellido>
+        <apodo>Juanchi</apodo>
+        <notas>8.5</notas>
+    </estudiante>
+    <estudiante rollno="2">
+        <nombre>Ana</nombre>
+        <apellido>García</apellido>
+        <apodo>Anita</apodo>
+        <notas>9.0</notas>
+    </estudiante>
+    <estudiante rollno="3">
+        <nombre>Carlos</nombre>
+        <apellido>Martínez</apellido>
+        <apodo>Carlitos</apodo>
+        <notas>7.5</notas>
+    </estudiante>
+</clase>

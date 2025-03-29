@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Clase>
+  <Estudiante rollno="1">
+    <nombre>Juan</nombre>
+    <apellido>Perez</apellido>
+    <apodo>JP</apodo>
+    <notas>90</notas>
+  </Estudiante>
+  <Estudiante rollno="2">
+    <nombre>Maria</nombre>
+    <apellido>Lopez</apellido>
+    <apodo>ML</apodo>
+    <notas>85</notas>
+  </Estudiante>
+  <Estudiante rollno="3">
+    <nombre>Pedro</nombre>
+    <apellido>Gonzalez</apellido>
+    <apodo>PG</apodo>
+    <notas>88</notas>
+  </Estudiante>
+</Clase>

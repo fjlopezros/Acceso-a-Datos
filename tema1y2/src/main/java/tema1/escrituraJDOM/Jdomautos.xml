@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autos>
+  <superautos compañía="Ferrari">
+    <nombreAuto tipo="fórmula uno">Ferrari 101</nombreAuto>
+    <nombreAuto tipo="deportivos">Ferrari 202</nombreAuto>
+  </superautos>
+</autos>

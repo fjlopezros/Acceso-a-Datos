@@ -1,0 +1,14 @@
+Instituto Nacional
+1200
+
+Colegio San Juan
+850
+
+Escuela Técnica Superior
+950
+
+Instituto Moderno
+1100
+
+Colegio La Salle
+700

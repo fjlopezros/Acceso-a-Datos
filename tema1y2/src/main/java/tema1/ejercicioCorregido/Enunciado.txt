@@ -1,0 +1,9 @@
+tengo dos archivos de texto persona1.txt y persona2.txt definidos en este formato(dni, nombre, edad):
+12345678A
+juan
+18
+87654321B
+pepe
+25
+
+quiero escribirlos en objetos persona1.obj persona2.obj para luego escribir los dos en un nuevo objeto (obj). Aparte haz aparte una excepcion creada por ti de validarEdad que te sale el error si la edad es menor que 1 o mayor que 150.

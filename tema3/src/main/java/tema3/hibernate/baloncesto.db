@@ -1,0 +1,78 @@
+-- Crear la base de datos baloncesto
+CREATE DATABASE baloncesto;
+USE baloncesto;
+
+-- Tabla EQUIPOS: Contiene información de los equipos
+CREATE TABLE equipos (
+    Nombre VARCHAR(20) NOT NULL,
+    Ciudad VARCHAR(20) DEFAULT NULL,
+    Conferencia VARCHAR(10) DEFAULT NULL,
+    Division VARCHAR(9) DEFAULT NULL,
+    PRIMARY KEY (Nombre)
+) ENGINE=InnoDB;
+
+-- Tabla JUGADORES: Contiene información de los jugadores
+CREATE TABLE jugadores (
+    Codigo INT NOT NULL,
+    Nombre VARCHAR(30) DEFAULT NULL,
+    Procedencia VARCHAR(40) DEFAULT NULL,
+    Altura_pies DECIMAL(4,2) DEFAULT NULL COMMENT 'Altura en pies, 1 pie = 0.3048 metros',
+    Peso_libras DECIMAL(5,2) DEFAULT NULL COMMENT 'Peso en libras, 1 libra = 453.59 gramos',
+    Posicion VARCHAR(2) DEFAULT NULL,
+    Nombre_equipo VARCHAR(20) DEFAULT NULL,
+    PRIMARY KEY (Codigo),
+    FOREIGN KEY (Nombre_equipo) REFERENCES equipos(Nombre)
+) ENGINE=InnoDB;
+
+-- Tabla ESTADISTICAS: Contiene información de las estadísticas de los jugadores
+CREATE TABLE estadisticas (
+    Codigo INT NOT NULL,
+    Jugador INT NOT NULL,
+    Puntos_por_partido FLOAT(5,2) DEFAULT NULL,
+    Asistencias_por_partido FLOAT(5,2) DEFAULT NULL,
+    Tapones_por_partido FLOAT(5,2) DEFAULT NULL,
+    Rebotes_por_partido FLOAT(5,2) DEFAULT NULL,
+    PRIMARY KEY (Codigo),
+    FOREIGN KEY (Jugador) REFERENCES jugadores(Codigo)
+) ENGINE=InnoDB;
+
+-- Tabla PARTIDOS: Contiene información de los partidos disputados
+CREATE TABLE partidos (
+    Codigo INT NOT NULL,
+    Equipo_local VARCHAR(20) DEFAULT NULL,
+    Equipo_visitante VARCHAR(20) DEFAULT NULL,
+    Puntos_local INT DEFAULT NULL,
+    Puntos_visitante INT DEFAULT NULL,
+    Temporada VARCHAR(9) DEFAULT NULL,
+    PRIMARY KEY (Codigo),
+    FOREIGN KEY (Equipo_local) REFERENCES equipos(Nombre),
+    FOREIGN KEY (Equipo_visitante) REFERENCES equipos(Nombre)
+) ENGINE=InnoDB;
+
+-- Insertar datos en la tabla EQUIPOS
+INSERT INTO equipos (Nombre, Ciudad, Conferencia, Division) VALUES
+('Lakers', 'Los Angeles', 'Oeste', 'Pacífica'),
+('Celtics', 'Boston', 'Este', 'Atlántica'),
+('Warriors', 'San Francisco', 'Oeste', 'Pacífica'),
+('Bulls', 'Chicago', 'Este', 'Central');
+
+-- Insertar datos en la tabla JUGADORES
+INSERT INTO jugadores (Codigo, Nombre, Procedencia, Altura_pies, Peso_libras, Posicion, Nombre_equipo) VALUES
+(1, 'LeBron James', 'Akron', 6.9, 250.00, 'A', 'Lakers'),
+(2, 'Stephen Curry', 'Akron', 6.3, 185.00, 'B', 'Warriors'),
+(3, 'Jayson Tatum', 'San Luis', 6.8, 210.00, 'A', 'Celtics'),
+(4, 'Michael Jordan', 'Brooklyn', 6.6, 216.00, 'E', 'Bulls');
+
+-- Insertar datos en la tabla ESTADISTICAS
+INSERT INTO estadisticas (Codigo, Jugador, Puntos_por_partido, Asistencias_por_partido, Tapones_por_partido, Rebotes_por_partido) VALUES
+(1, 1, 27.2, 7.2, 0.8, 7.5),  -- Estadísticas de LeBron James
+(2, 2, 25.5, 6.3, 0.3, 4.5),  -- Estadísticas de Stephen Curry
+(3, 3, 26.9, 4.4, 0.9, 7.1),  -- Estadísticas de Jayson Tatum
+(4, 4, 30.1, 5.3, 0.8, 6.2);  -- Estadísticas de Michael Jordan
+
+-- Insertar datos en la tabla PARTIDOS
+INSERT INTO partidos (Codigo, Equipo_local, Equipo_visitante, Puntos_local, Puntos_visitante, Temporada) VALUES
+(1, 'Lakers', 'Celtics', 120, 115, '2023-24'),
+(2, 'Warriors', 'Bulls', 110, 102, '2023-24'),
+(3, 'Celtics', 'Lakers', 99, 104, '2023-24'),
+(4, 'Bulls', 'Warriors', 95, 112, '2023-24');

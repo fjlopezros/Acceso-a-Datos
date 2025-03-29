@@ -1,0 +1,22 @@
+<class>
+   <estudiante rollno="393">
+      <nombre>dinkar</nombre>
+      <apellido>kad</apellido>
+      <apodo>dinkar</apodo>
+      <notas>85</notas>
+   </estudiante>
+
+   <estudiante rollno="493">
+      <nombre>Vaneet</nombre>
+      <apellido>Gupta</apellido>
+      <apodo>vinni</apodo>
+      <notas>95</notas>
+   </estudiante>
+
+   <estudiante rollno="593">
+      <nombre>jasvir</nombre>
+      <apellido>singh</apellido>
+      <apodo>jazz</apodo>
+      <notas>90</notas>
+   </estudiante>
+</class>

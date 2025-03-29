@@ -1,0 +1,21 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuración de la Base de Datos -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/baloncesto</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!-- Mostrar SQL en consola -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Configuración de la entidad -->
+        <mapping class="tema3.hibernate.modelo.Partido"/>
+        <mapping class="tema3.hibernate.modelo.Estadistica"/>
+        <mapping class="tema3.hibernate.modelo.Jugador"/>
+        <mapping class="tema3.hibernate.modelo.Equipo"/>
+    </session-factory>
+</hibernate-configuration>

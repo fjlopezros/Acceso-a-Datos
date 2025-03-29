@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Videojuegos.xsl"?>
+<!--Estructura del XML-->
+<videojuegos>
+    <videojuego>
+        <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+        <plataforma>Nintendo Switch</plataforma>
+        <genero>Acción/Aventura</genero>
+        <anio_lanzamiento>2017</anio_lanzamiento>
+        <desarrollador>Nintendo</desarrollador>
+    </videojuego>
+    <videojuego>
+        <titulo>The Witcher 3: Wild Hunt</titulo>
+        <plataforma>PC, PS4, Xbox One, Nintendo Switch</plataforma>
+        <genero>RPG</genero>
+        <anio_lanzamiento>2015</anio_lanzamiento>
+        <desarrollador>CD Projekt Red</desarrollador>
+    </videojuego>
+    <videojuego>
+        <titulo>Stardew Valley</titulo>
+        <plataforma>PC, PS4, Xbox One, Nintendo Switch, móviles</plataforma>
+        <genero>Simulación/RPG</genero>
+        <anio_lanzamiento>2016</anio_lanzamiento>
+        <desarrollador>ConcernedApe</desarrollador>
+    </videojuego>
+</videojuegos>

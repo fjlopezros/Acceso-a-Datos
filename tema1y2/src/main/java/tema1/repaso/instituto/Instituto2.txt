@@ -1,0 +1,14 @@
+Instituto Central
+1300
+
+Colegio Santa María
+900
+
+Escuela Politécnica
+1000
+
+Instituto de Ciencias
+1150
+
+Colegio San Pedro
+800
